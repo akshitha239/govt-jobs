@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Government Jobs Guide</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: #0b3d6d;
+      color: white;
+      padding: 18px 20px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      padding: 110px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #0b3d6d;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: #0b3d6d;
+      margin-top: 0;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin: 30px 0 50px;
+    }
+
+    .stat {
+      background: linear-gradient(135deg, #0b3d6d, #1d5d9b);
+      color: white;
+      border-radius: 12px;
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(11, 61, 109, 0.2);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
+
+    .eligibility {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .level {
+      background: #eaf4ff;
+      border-left: 6px solid #0b3d6d;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .level h3 {
+      margin-top: 0;
+      color: #0b3d6d;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dfefff;
+      color: #0b3d6d;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .qualification-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .qualification-table th,
+    .qualification-table td {
+      border: 1px solid #dfe7f4;
+      padding: 14px 12px;
+      text-align: left;
+    }
+
+    .qualification-table th {
+      background: #0b3d6d;
+      color: white;
+    }
+
+    .jobs-list {
+      margin-top: 50px;
+      background: white;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .jobs-list ul {
+      columns: 2;
+      column-gap: 30px;
+      padding-left: 20px;
+    }
+
+    .note-box {
+      margin-top: 30px;
+      background: #fff7e6;
+      border-left: 6px solid #f4b942;
+      padding: 18px 20px;
+      border-radius: 10px;
+      color: #4a3a15;
+    }
+
+    .age-pattern {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .pattern-box {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .pattern-box h3 {
+      margin-top: 0;
+      color: #0b3d6d;
+    }
+
+    .pattern-box ul {
+      margin-bottom: 0;
+      padding-left: 18px;
+    }
+
+    .footer {
+      background: #0b3d6d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .jobs-list ul {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">GOVERNMENT JOBS GUIDE</div>
+
+  <header class="hero">
+    <h1>Different Types of Government Jobs</h1>
+    <p>
+      Discover the major government job categories and the education levels required to apply,
+      including SSC, Degree, B.Tech, and Post Graduation options.
+    </p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Types of Government Jobs</h2>
+
+    <section class="cards">
+      <div class="card">
+        <h3>1. Central Government Jobs</h3>
+        <ul>
+          <li>SSC CGL</li>
+          <li>UPSC Civil Services</li>
+          <li>IBPS</li>
+          <li>RRB</li>
+          <li>Railway Jobs</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>2. State Government Jobs</h3>
+        <ul>
+          <li>PSC Exams</li>
+          <li>Police Jobs</li>
+          <li>Teaching Jobs</li>
+          <li>Health Department</li>
+          <li>Municipal Jobs</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>3. Defense Jobs</h3>
+        <ul>
+          <li>Indian Army</li>
+          <li>Indian Navy</li>
+          <li>Indian Air Force</li>
+          <li>Officer Posts</li>
+          <li>Soldier / Clerk Roles</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>4. Banking & Finance Jobs</h3>
+        <ul>
+          <li>Bank PO</li>
+          <li>Clerk Jobs</li>
+          <li>IBPS Exams</li>
+          <li>Banking Assistants</li>
+          <li>Credit Officers</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>5. Railway Jobs</h3>
+        <ul>
+          <li>Station Master</li>
+          <li>Ticket Clerk</li>
+          <li>Technician</li>
+          <li>Assistant Loco Pilot</li>
+          <li>Group D Posts</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>6. Public Sector Jobs</h3>
+        <ul>
+          <li>ONGC</li>
+          <li>IOCL</li>
+          <li>BHEL</li>
+          <li>NTPC</li>
+          <li>GAIL</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 class="section-title" style="margin-top: 60px;">Qualification Guide: SSC, Degree, B.Tech, and PG</h2>
+
+    <section class="quick-stats">
+      <div class="stat">
+        <strong>SSC</strong>
+        10th/12th level jobs
+      </div>
+      <div class="stat">
+        <strong>Degree</strong>
+        Graduate-level jobs
+      </div>
+      <div class="stat">
+        <strong>B.Tech</strong>
+        Technical government roles
+      </div>
+      <div class="stat">
+        <strong>PG</strong>
+        Higher-level officer jobs
+      </div>
+    </section>
+
+    <section class="eligibility">
+      <div class="level">
+        <span class="badge">SSC / 10th Pass</span>
+        <h3>SSC / 10th Pass</h3>
+        <p>People with SSC or 10th pass can apply for entry-level government jobs such as:</p>
+        <ul>
+          <li>Railway Group D</li>
+          <li>Police Constable</li>
+          <li>Multi Tasking Staff</li>
+          <li>Lower Division Clerk</li>
+          <li>State-level support jobs</li>
+        </ul>
+      </div>
+
+      <div class="level">
+        <span class="badge">Degree</span>
+        <h3>Degree / Graduation</h3>
+        <p>Graduates can apply for many central and state government jobs like:</p>
+        <ul>
+          <li>SSC CGL</li>
+          <li>Bank Clerk / PO</li>
+          <li>State PSC</li>
+          <li>Tax Assistant</li>
+          <li>Office and admin jobs</li>
+        </ul>
+      </div>
+
+      <div class="level">
+        <span class="badge">B.Tech</span>
+        <h3>B.Tech / Engineering</h3>
+        <p>B.Tech graduates are eligible for technical and officer-level government jobs:</p>
+        <ul>
+          <li>Indian Engineering Services</li>
+          <li>Public Sector Units</li>
+          <li>Technical Officer Jobs</li>
+          <li>Railway Technician Roles</li>
+          <li>Engineering department posts</li>
+        </ul>
+      </div>
+
+      <div class="level">
+        <span class="badge">PG</span>
+        <h3>Post Graduation</h3>
+        <p>Postgraduates are preferred for advanced and specialist government jobs:</p>
+        <ul>
+          <li>UPSC Civil Services</li>
+          <li>Lecturer / Professor</li>
+          <li>Research Jobs</li>
+          <li>Specialist Government Roles</li>
+          <li>Higher administrative posts</li>
+        </ul>
+      </div>
+    </section>
+
+    <table class="qualification-table">
+      <thead>
+        <tr>
+          <th>Qualification</th>
+          <th>Jobs You Can Apply For</th>
+          <th>Common Requirement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SSC / 10th Pass</td>
+          <td>Constable, Group D, Clerk, Support Staff</td>
+          <td>Basic education and age limit</td>
+        </tr>
+        <tr>
+          <td>Degree</td>
+          <td>SSC CGL, Bank Jobs, PSC, Assistant roles</td>
+          <td>Graduation from a recognized university</td>
+        </tr>
+        <tr>
+          <td>B.Tech</td>
+          <td>Technical officer, PSU jobs, engineering posts</td>
+          <td>Engineering degree and relevant skills</td>
+        </tr>
+        <tr>
+          <td>PG</td>
+          <td>Civil Services, teaching, research, specialized officer posts</td>
+          <td>Master degree with competitive exam preparation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      <strong>Important:</strong> To get a government job, you must check the official notification, age limit, qualification, exam pattern, and last date before applying.
+    </div>
+
+    <h2 class="section-title" style="margin-top: 60px;">Age Limit and Exam Pattern</h2>
+
+    <section class="age-pattern">
+      <div class="pattern-box">
+        <h3>SSC / 10th Pass</h3>
+        <p><strong>Age limit:</strong> Usually 18 to 30 years, depending on the post.</p>
+        <p><strong>Exam pattern:</strong> Mostly objective-type questions, with subjects like General Intelligence, Quantitative Aptitude, English, and General Awareness.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h3>Degree</h3>
+        <p><strong>Age limit:</strong> Usually 18 to 32 years for many exams such as SSC CGL, IBPS, and state jobs.</p>
+        <p><strong>Exam pattern:</strong> Tier 1 objective papers, followed by Tier 2 or interview/skill test depending on the recruitment.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h3>B.Tech</h3>
+        <p><strong>Age limit:</strong> Generally 21 to 30 years, but it varies by department and exam.</p>
+        <p><strong>Exam pattern:</strong> Usually written exam, technical paper, personality test, and sometimes interview for engineering posts.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h3>PG / Master Degree</h3>
+        <p><strong>Age limit:</strong> Commonly 21 to 35 years, depending on the job and organization.</p>
+        <p><strong>Exam pattern:</strong> Competitive exam with general studies, subject knowledge, aptitude, and interview or descriptive papers.</p>
+      </div>
+    </section>
+
+    <section class="jobs-list">
+      <h2 class="section-title">Popular Government Exams</h2>
+      <ul>
+        <li>SSC CGL</li>
+        <li>SSC CHSL</li>
+        <li>UPSC Civil Services</li>
+        <li>IBPS PO</li>
+        <li>IBPS Clerk</li>
+        <li>RRB NTPC</li>
+        <li>RRB Group D</li>
+        <li>State PSC</li>
+        <li>Police Recruitment</li>
+        <li>Defence Exams</li>
+        <li>Bank Exams</li>
+        <li>Teaching Recruitment</li>
+        <li>Railway Exams</li>
+        <li>Engineering Services Exam</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Government Jobs Guide • Learn about different career paths and eligibility
+  </footer>
+</body>
+</html>
